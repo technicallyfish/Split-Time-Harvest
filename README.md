@@ -1,2 +1,2 @@
 # Split-Time-Harvest
-Game for Hack Club Harvest :]
+Split Time updated for Hack Club Harvest :]
