@@ -39,6 +39,6 @@ func _on_submit_pressed() -> void:
 
 # does this work yes
 func _on_video_stream_player_finished() -> void:
-	Global.current_date = ["04", "18", "2393"]
+	Global.current_date = ["10", "22", "4004"]
 	%DateLabel.text = "%s/%s/%s" % Global.current_date
 	get_tree().change_scene_to_file("res://level_1.tscn")

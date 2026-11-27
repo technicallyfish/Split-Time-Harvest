@@ -1,10 +1,13 @@
 [gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Texture2D" uid="uid://btinyjmofu4s4" path="res://space.jpeg" id="2_b6mmh"]
+[ext_resource type="Texture2D" uid="uid://b8qgkqaqvwct4" path="res://death_screen.png" id="2_ia5ws"]
 [ext_resource type="PackedScene" uid="uid://ctoiooopsqp1v" path="res://hud.tscn" id="2_rka8t"]
 [ext_resource type="Texture2D" uid="uid://dpwr2cgbfoyr8" path="res://green.jpeg" id="3_5hph3"]
+[ext_resource type="Texture2D" uid="uid://dtl5ou8xxy65s" path="res://button_text_bounce_back.png" id="3_hycyb"]
 [ext_resource type="Texture2D" uid="uid://fvhdrtm0hiut" path="res://evil_magenta.jpeg" id="3_lfy8a"]
 [ext_resource type="Texture2D" uid="uid://bfn4huacjgeqq" path="res://light_grey.jpeg" id="4_ethxx"]
+[ext_resource type="Texture2D" uid="uid://swvaoo85b5vw" path="res://button_text_quit.png" id="4_swvua"]
 [ext_resource type="Texture2D" uid="uid://bxavsk6cguc0d" path="res://dark_grey.jpeg" id="6_3o2xh"]
 [ext_resource type="Texture2D" uid="uid://du1gcqgkpcs22" path="res://asteroid_tile.png" id="7_duihb"]
 [ext_resource type="Texture2D" uid="uid://bxd40rtgw7g5f" path="res://astroil_tile_1.png" id="8_b6mmh"]
@@ -21,14 +24,15 @@
 [ext_resource type="Texture2D" uid="uid://cfi0n3uwf6avb" path="res://harold_left.png" id="19_84ct4"]
 [ext_resource type="Texture2D" uid="uid://dj0jxd28cfqis" path="res://up_text.png" id="19_duihb"]
 [ext_resource type="Texture2D" uid="uid://bqee7g6o4jomk" path="res://nothing_text.png" id="20_b6mmh"]
+[ext_resource type="Texture2D" uid="uid://bwpdh1b20nqkg" path="res://help_text_e.png" id="20_hycyb"]
 [ext_resource type="Texture2D" uid="uid://eh8q8hhk27wo" path="res://harold_right.png" id="20_i5xja"]
+[ext_resource type="Texture2D" uid="uid://bi22qriqejnrr" path="res://help_text_t.png" id="21_hycyb"]
 [ext_resource type="Texture2D" uid="uid://bpmmqsq26mml8" path="res://npc_1.png" id="21_mdra8"]
-[ext_resource type="Texture2D" uid="uid://ceo0e2d3nt576" path="res://q_text.png" id="23_3o2xh"]
-[ext_resource type="Texture2D" uid="uid://cla6ch36ntl4s" path="res://e_text.png" id="24_duihb"]
 [ext_resource type="Texture2D" uid="uid://b0kyirell2h17" path="res://harold_front.png" id="24_ttn6t"]
 [ext_resource type="AudioStream" uid="uid://cgrsbs1gi4kut" path="res://MyVeryOwnDeadShip.ogg" id="27_ttn6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0.03137255, 0.0627451, 0.14117648, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_getpj"]
 texture = ExtResource("3_lfy8a")
@@ -433,7 +437,6 @@ unique_name_in_owner = true
 
 [node name="DeathScreen" type="CanvasLayer" parent="." unique_id=1410296787]
 unique_name_in_owner = true
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="DeathScreen" unique_id=1406700794]
 offset_left = -147.0
@@ -442,35 +445,63 @@ offset_right = 1308.0
 offset_bottom = 787.0
 color = Color(0, 0, 0, 1)
 
+[node name="Label2" type="Label" parent="DeathScreen" unique_id=2066006910]
+offset_left = 404.0
+offset_top = 158.0
+offset_right = 771.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 80
+text = "You Died!"
+
 [node name="Label" type="Label" parent="DeathScreen" unique_id=1526012132]
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="TextureRect" type="TextureRect" parent="DeathScreen" unique_id=272016975]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ia5ws")
+expand_mode = 1
+
 [node name="Respawn" type="Button" parent="DeathScreen" unique_id=2069784532]
-offset_left = 210.0
-offset_top = 506.0
-offset_right = 482.0
-offset_bottom = 572.0
+offset_left = 230.0
+offset_top = 442.0
+offset_right = 527.0
+offset_bottom = 519.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
-text = "Bounce Back"
+
+[node name="TextureRect" type="TextureRect" parent="DeathScreen/Respawn" unique_id=639597529]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hycyb")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Quit" type="Button" parent="DeathScreen" unique_id=704953227]
-offset_left = 634.0
-offset_top = 506.0
-offset_right = 906.0
-offset_bottom = 572.0
+offset_left = 636.0
+offset_top = 443.0
+offset_right = 926.0
+offset_bottom = 519.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
-text = "Quit"
 
-[node name="Label2" type="Label" parent="DeathScreen" unique_id=2066006910]
-offset_left = 377.0
-offset_top = 184.0
-offset_right = 744.0
-offset_bottom = 294.0
-theme_override_font_sizes/font_size = 80
-text = "You Died!"
+[node name="TextureRect" type="TextureRect" parent="DeathScreen/Quit" unique_id=93261342]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_swvua")
+expand_mode = 1
 
 [node name="background" type="CanvasLayer" parent="." unique_id=1006722701]
 layer = -100
@@ -877,12 +908,12 @@ position = Vector2(1598, -1437)
 [node name="EText" type="Sprite2D" parent="." unique_id=738924495]
 position = Vector2(13, -166)
 scale = Vector2(0.16, 0.16)
-texture = ExtResource("24_duihb")
+texture = ExtResource("20_hycyb")
 
-[node name="QText" type="Sprite2D" parent="." unique_id=563000644]
+[node name="TText" type="Sprite2D" parent="." unique_id=563000644]
 position = Vector2(11918, 339)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("23_3o2xh")
+texture = ExtResource("21_hycyb")
 
 [node name="UpText" type="Sprite2D" parent="." unique_id=753740711]
 position = Vector2(646, 2846)

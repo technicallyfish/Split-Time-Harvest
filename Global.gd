@@ -1,6 +1,6 @@
 extends Node
 
-var current_date:Array = ['10', '22', '4004']
+var current_date:Array = ['??', '??', '????']
 
 func _ready(): pass
 

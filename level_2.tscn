@@ -11,14 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://djmwmsmpimjvh" path="res://little_npc.png" id="7_5kfcu"]
 [ext_resource type="Script" uid="uid://csj5e3aorsenp" path="res://hanks_player.gd" id="7_15wb7"]
 [ext_resource type="Script" uid="uid://c5wb0t22u6s16" path="res://npc_2.gd" id="8_5kfcu"]
+[ext_resource type="Texture2D" uid="uid://bi22qriqejnrr" path="res://help_text_t.png" id="8_i558w"]
 [ext_resource type="Texture2D" uid="uid://qyiorydug5n5" path="res://cloud_light_small.png" id="8_jcnlr"]
 [ext_resource type="Texture2D" uid="uid://banfe7e6dckoo" path="res://cloud_light_platform.png" id="9_5kfcu"]
-[ext_resource type="Texture2D" uid="uid://cla6ch36ntl4s" path="res://e_text.png" id="9_wvr33"]
+[ext_resource type="Texture2D" uid="uid://bwpdh1b20nqkg" path="res://help_text_e.png" id="9_cuxq2"]
 [ext_resource type="Texture2D" uid="uid://bl51ppb8ff48h" path="res://cloud_light_medium.png" id="10_i558w"]
 [ext_resource type="PackedScene" uid="uid://bc3gir3rbaxbq" path="res://cloud_platform.tscn" id="13_5hnhx"]
 [ext_resource type="PackedScene" uid="uid://bth6fiwxo5qtr" path="res://cloud_medium.tscn" id="14_78pok"]
 [ext_resource type="PackedScene" uid="uid://cypnhw5t5myh7" path="res://cloud_small.tscn" id="15_lvfll"]
-[ext_resource type="Texture2D" uid="uid://ceo0e2d3nt576" path="res://q_text.png" id="21_cuxq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yl73a"]
 texture = ExtResource("1_0s5r2")
@@ -313,15 +313,15 @@ text = "You Died!"
 [node name="teleport_player" type="Marker2D" parent="." unique_id=2116982376]
 unique_name_in_owner = true
 
-[node name="QText" type="Sprite2D" parent="." unique_id=748312194]
+[node name="TText" type="Sprite2D" parent="." unique_id=748312194]
 position = Vector2(1720, 6173)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("21_cuxq2")
+texture = ExtResource("8_i558w")
 
 [node name="EText" type="Sprite2D" parent="." unique_id=1280765837]
 position = Vector2(1.000061, -173)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_wvr33")
+texture = ExtResource("9_cuxq2")
 
 [node name="Npc2" type="Sprite2D" parent="." unique_id=617260569]
 position = Vector2(1716.3997, 6251.3994)
