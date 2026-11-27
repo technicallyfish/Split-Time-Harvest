@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Texture2D" uid="uid://bhmt02hs2ehf0" path="res://level_1_galaxy.png" id="2_kb5eu"]
+[ext_resource type="Texture2D" uid="uid://btinyjmofu4s4" path="res://space.jpeg" id="2_b6mmh"]
 [ext_resource type="PackedScene" uid="uid://ctoiooopsqp1v" path="res://hud.tscn" id="2_rka8t"]
 [ext_resource type="Texture2D" uid="uid://dpwr2cgbfoyr8" path="res://green.jpeg" id="3_5hph3"]
 [ext_resource type="Texture2D" uid="uid://fvhdrtm0hiut" path="res://evil_magenta.jpeg" id="3_lfy8a"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://c2w6cknp0htm" path="res://asteroid_grey.tscn" id="16_ett8d"]
 [ext_resource type="Script" uid="uid://csj5e3aorsenp" path="res://hanks_player.gd" id="17_4p6gt"]
 [ext_resource type="Script" uid="uid://cigkn2rry4j2r" path="res://npc_1.gd" id="18_lfy8a"]
-[ext_resource type="Texture2D" uid="uid://dat7yh5x7a2j0" path="res://harold_foward.png" id="18_td8cy"]
 [ext_resource type="Texture2D" uid="uid://cfi0n3uwf6avb" path="res://harold_left.png" id="19_84ct4"]
 [ext_resource type="Texture2D" uid="uid://dj0jxd28cfqis" path="res://up_text.png" id="19_duihb"]
 [ext_resource type="Texture2D" uid="uid://bqee7g6o4jomk" path="res://nothing_text.png" id="20_b6mmh"]
@@ -26,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://bpmmqsq26mml8" path="res://npc_1.png" id="21_mdra8"]
 [ext_resource type="Texture2D" uid="uid://ceo0e2d3nt576" path="res://q_text.png" id="23_3o2xh"]
 [ext_resource type="Texture2D" uid="uid://cla6ch36ntl4s" path="res://e_text.png" id="24_duihb"]
+[ext_resource type="Texture2D" uid="uid://b0kyirell2h17" path="res://harold_front.png" id="24_ttn6t"]
+[ext_resource type="AudioStream" uid="uid://cgrsbs1gi4kut" path="res://MyVeryOwnDeadShip.ogg" id="27_ttn6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
 
@@ -480,7 +481,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_kb5eu")
+texture = ExtResource("2_b6mmh")
 stretch_mode = 6
 
 [node name="level_1_draft" type="TileMapLayer" parent="." unique_id=1155644597]
@@ -912,20 +913,26 @@ shape = SubResource("RectangleShape2D_3uy1k")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=720890436]
 unique_name_in_owner = true
 script = ExtResource("17_4p6gt")
-texture_front = ExtResource("18_td8cy")
+texture_front = ExtResource("24_ttn6t")
 texture_left = ExtResource("19_84ct4")
 texture_right = ExtResource("20_i5xja")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player" unique_id=1324652776]
+process_mode = 3
+stream = ExtResource("27_ttn6t")
+autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=406513347]
 position = Vector2(10.200005, 41.199997)
 scale = Vector2(0.18984376, 0.18984376)
-texture = ExtResource("18_td8cy")
+texture = ExtResource("24_ttn6t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1406935174]
 position = Vector2(10.5, 71.7)
 shape = SubResource("RectangleShape2D_jnehr")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1089663281]
+zoom = Vector2(0.75, 0.75)
 
 [node name="TextboxContainer" type="CanvasLayer" parent="." unique_id=1088121249]
 unique_name_in_owner = true

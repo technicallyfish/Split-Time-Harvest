@@ -1,7 +1,7 @@
 extends Node2D
 
 var speaker = 'test'
-var text = ['line 1','line 2 fijdlkg hdfgs jryghirhgruit uijhuijdgiyg rg ijr ','//text test', 'extra line here for fun']
+var text = ['line 1','line that needs to be very very very long ','//text test', 'extra line here for fun']
 # use //text <answer> for a textbox question
 
 var line = 0

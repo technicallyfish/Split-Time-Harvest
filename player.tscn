@@ -1,18 +1,23 @@
 [gd_scene format=3 uid="uid://sxeh5qou6d6d"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://amelies_player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dat7yh5x7a2j0" path="res://harold_foward.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://b0kyirell2h17" path="res://harold_front.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://cfi0n3uwf6avb" path="res://harold_left.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://eh8q8hhk27wo" path="res://harold_right.png" id="4_2hs0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(73, 127)
 
 [node name="Player" type="CharacterBody2D" unique_id=1416929455]
 script = ExtResource("1_onrkg")
+texture_front = ExtResource("2_hqtel")
+texture_left = ExtResource("3_sweqy")
+texture_right = ExtResource("4_2hs0m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=630425377]
 position = Vector2(10.200005, 41.199997)
 scale = Vector2(0.18984376, 0.18984376)
-texture = ExtResource("2_onrkg")
+texture = ExtResource("2_hqtel")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=999501748]
 position = Vector2(10.5, 71.7)

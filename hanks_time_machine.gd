@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const dates = {["06","15","2875"]: "intro", ["04", "18", "2393"]: "level_1", ["01", "30", "2086"]: "level_2", ["11", "15", "2026"]: "outro"}
+const dates = {["00","00","0000"]: "intro", ["10", "22", "4004"]: "level_1", ["01", "19", "2089"]: "level_2", ["11", "15", "2026"]: "outro"}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

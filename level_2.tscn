@@ -11,13 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://djmwmsmpimjvh" path="res://little_npc.png" id="7_5kfcu"]
 [ext_resource type="Script" uid="uid://csj5e3aorsenp" path="res://hanks_player.gd" id="7_15wb7"]
 [ext_resource type="Script" uid="uid://c5wb0t22u6s16" path="res://npc_2.gd" id="8_5kfcu"]
-[ext_resource type="Texture2D" uid="uid://dat7yh5x7a2j0" path="res://harold_foward.png" id="8_eoq84"]
 [ext_resource type="Texture2D" uid="uid://qyiorydug5n5" path="res://cloud_light_small.png" id="8_jcnlr"]
 [ext_resource type="Texture2D" uid="uid://banfe7e6dckoo" path="res://cloud_light_platform.png" id="9_5kfcu"]
 [ext_resource type="Texture2D" uid="uid://cla6ch36ntl4s" path="res://e_text.png" id="9_wvr33"]
-[ext_resource type="Texture2D" uid="uid://cfi0n3uwf6avb" path="res://harold_left.png" id="9_yl73a"]
 [ext_resource type="Texture2D" uid="uid://bl51ppb8ff48h" path="res://cloud_light_medium.png" id="10_i558w"]
-[ext_resource type="Texture2D" uid="uid://eh8q8hhk27wo" path="res://harold_right.png" id="10_xbcdb"]
 [ext_resource type="PackedScene" uid="uid://bc3gir3rbaxbq" path="res://cloud_platform.tscn" id="13_5hnhx"]
 [ext_resource type="PackedScene" uid="uid://bth6fiwxo5qtr" path="res://cloud_medium.tscn" id="14_78pok"]
 [ext_resource type="PackedScene" uid="uid://cypnhw5t5myh7" path="res://cloud_small.tscn" id="15_lvfll"]
@@ -520,9 +517,6 @@ texture = ExtResource("10_i558w")
 [node name="Player" parent="." unique_id=1416929455 instance=ExtResource("6_eoq84")]
 unique_name_in_owner = true
 script = ExtResource("7_15wb7")
-texture_front = ExtResource("8_eoq84")
-texture_left = ExtResource("9_yl73a")
-texture_right = ExtResource("10_xbcdb")
 
 [node name="CloudPlatform" parent="." unique_id=477112435 instance=ExtResource("13_5hnhx")]
 position = Vector2(6, 194)

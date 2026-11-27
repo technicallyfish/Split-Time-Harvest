@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dat7yh5x7a2j0"
-path="res://.godot/imported/harold_foward.png-50e63378c5721b7152a9e99ad815b670.ctex"
+uid="uid://btinyjmofu4s4"
+path="res://.godot/imported/space.jpeg-ca87822b7db63eb7ab42d2e0688c91cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://harold_foward.png"
-dest_files=["res://.godot/imported/harold_foward.png-50e63378c5721b7152a9e99ad815b670.ctex"]
+source_file="res://space.jpeg"
+dest_files=["res://.godot/imported/space.jpeg-ca87822b7db63eb7ab42d2e0688c91cf.ctex"]
 
 [params]
 
