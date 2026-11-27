@@ -28,7 +28,7 @@ offset_left = 19.0
 offset_top = 11.0
 offset_right = 212.0
 offset_bottom = 62.0
-text = "06/15/1689"
+text = "01/01/1000"
 label_settings = SubResource("LabelSettings_xdqh6")
 
 [node name="PopupPanel" type="PopupPanel" parent="." unique_id=2027907591]

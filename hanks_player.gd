@@ -60,7 +60,11 @@ func _physics_process(delta: float) -> void:
 			
 		if Input.is_action_pressed("up"):
 			velocity.y -= LIFT_VELOCITY[0] if velocity.y >= 0 else LIFT_VELOCITY[1]
-
+		if Input.is_action_just_pressed("up") and %DeathScreen.visible == false:
+			%rocket_launch.play()
+		elif Input.is_action_just_released("up"):
+			$rocket_launch.stop() 
+			
 	var accel = Input.get_axis("left", "right")
 	velocity.x += accel * SPEED
 	velocity.x *= 0.9
@@ -74,8 +78,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		# reset
 		$Sprite2D.texture = texture_front
-
+	
 	move_and_slide()
+	
+	if is_on_floor() and (Input.is_action_pressed("left") or Input.is_action_pressed("right")):
+		if not %step_asteroid.playing:
+			%step_asteroid.play()
+	elif not is_on_floor() or Input.is_action_just_released("left") or Input.is_action_just_released("right"):
+		$step_asteroid.stop()
 
 	var tm_interaction_range = %TimeMachineBox.get_overlapping_bodies()
 	for body in tm_interaction_range:
