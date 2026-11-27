@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bx0ij6y267ty4"]
+
+[ext_resource type="VideoStream" uid="uid://bfehuyxd7xb6d" path="res://Both-Games-Ending.ogv" id="1_d2ofq"]
+
+[node name="Node" type="Node" unique_id=1151578058]
+
+[node name="Control" type="Control" parent="." unique_id=752559768]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 668.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control" unique_id=1721784492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_d2ofq")
+autoplay = true
+expand = true

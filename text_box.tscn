@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ckevwye4sytsr"]
+
+[ext_resource type="Script" uid="uid://dk2bv3f2gbjou" path="res://text_box.gd" id="1_k7ve7"]
+[ext_resource type="StyleBox" uid="uid://dspfgb214a2yf" path="res://hide_button.tres" id="2_d0rgj"]
+
+[sub_resource type="FontFile" id="FontFile_kf7jm"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[node name="TextBox" type="Node2D" unique_id=1799328624]
+process_mode = 3
+script = ExtResource("1_k7ve7")
+
+[node name="Panel" type="Panel" parent="." unique_id=1505277271]
+offset_left = 62.0
+offset_top = 406.0
+offset_right = 1090.0
+offset_bottom = 613.0
+
+[node name="SpeakerName" type="Label" parent="." unique_id=304513687]
+unique_name_in_owner = true
+offset_left = 87.0
+offset_top = 355.0
+offset_right = 193.0
+offset_bottom = 410.0
+theme_override_fonts/font = SubResource("FontFile_kf7jm")
+theme_override_font_sizes/font_size = 40
+text = "Name"
+
+[node name="Dialogue" type="Label" parent="." unique_id=1239475677]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+offset_left = 91.0
+offset_top = 421.0
+offset_right = 1066.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 25
+text = "once apon a time, blah blah blah blah"
+autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="." unique_id=1965189728]
+unique_name_in_owner = true
+process_mode = 3
+offset_left = 1010.0
+offset_top = 371.0
+offset_right = 1089.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("2_d0rgj")
+theme_override_styles/pressed = ExtResource("2_d0rgj")
+theme_override_styles/hover = ExtResource("2_d0rgj")
+text = " × Hide "
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=954153206]
+offset_left = 92.0
+offset_top = 570.0
+offset_right = 991.0
+offset_bottom = 601.0
+
+[node name="SubmitButton" type="Button" parent="." unique_id=1898602379]
+offset_left = 1002.0
+offset_top = 570.0
+offset_right = 1077.0
+offset_bottom = 601.0
+text = ">>>"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
